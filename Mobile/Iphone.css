@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+:root {
+    --background-color : #fff;
+    --color-primary : #000;
+    --color-secondary : #142B5D;
+}
+body {
+    line-height: 1.4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.iphone {
+    --color-grey : #575D6B;
+    --border-radious : 30px;
+    --border-radious-primary : 35px;
+    --color-black : #222;
+    width: 300px;
+    height: 600px;
+    border-radius:var(--border-radious-primary);
+    background-color: var(--color-grey);
+    position: relative;
+    border: 1px solid black;
+    transition: var(--transition-primary);
+}
+.iphone::before {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    background-color: white;
+    border-radius: var(--border-radious);
+}
+.iphone-notification-bar {
+    --transition-primary : .2s;
+    width: 100px;
+    height: 25px;
+    border-radius: 60px;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    transition: all var(--transition-primary);
+}
+.iphone-notification-bar:hover {
+    width: 140px;
+    border: 1px solid rgba(128, 0, 128 , .2);
+}
+.iphone-notification-bar::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: rgba(156, 156, 156 , .2);
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.iphone-notification-bar::before {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background: linear-gradient(to right , rgba(255,255,255,.1) , rgba(128, 0, 128 , .4));
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.iphone-left-btns {
+    position: absolute;
+    left: -4px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    top: 100px;
+}
+.iphone-left-btns .btn-one{
+    width: 4px;
+    height: 30px;
+    background-color: black;
+    border-radius: 5px;
+}
+.iphone-left-btns .left-bottom-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.left-bottom-btns .b-btn-one ,
+.left-bottom-btns .b-btn-two {
+    width: 4px;
+    height: 50px;
+    background-color: black;
+}
+.iphpne-right-btn {
+    position: absolute;
+    right: -4px;
+    top: 180px;
+}
+.iphpne-right-btn .r-btn {
+    width: 4px;
+    height: 70px;
+    background-color: var(--color-primary);
+}
+.iphpne-right-btn .r-btn::before {
+    content: '';
+    width: 20px;
+    position: absolute;
+    height: 1px;
+    background-color: var(--color-secondary);
+    left: 0px;
+    top: 20px;
+}
+.iphpne-right-btn .r-btn::after {
+    content: '';
+    width: 20px;
+    position: absolute;
+    height: 1px;
+    background-color: var(--color-secondary);
+    left: 20px;
+    top: 20px;
+    transform: rotate(-40deg);
+    transform-origin: left;
+}
+.turn-off {
+    position: absolute;
+    inset: 5px;
+    background-color: #fff;
+    border-radius: var(--border-radious);
+    transition: all var(--transition-primary);
+}
+.turn-on {
+    transition: all var(--transition-primary);
+    background-color: var(--color-primary);
+}
+.iphone-time {
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.iphone-time h4 {
+    font-size: 22px;
+    font-family: sans-serif;
+}
+.iphone-time h2 {
+    font-size: 60px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.iphone-shadow {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 2px;
+    /* background: rgba(0,0,0,.2); */
+    border-radius: 20px;
+    box-shadow: 10px 10px 50px #000 ,10px 10px 20px #000;
+}
+.off-on {
+    position: absolute;
+    right: -50px;
+    top: 160px;
+}
+.iphone-icons {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    left: 0;
+    bottom: 0;
+}
+.iphone-icons i {
+    font-size: 25px;
+}
+.iphone-signals {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
